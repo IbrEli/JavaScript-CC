@@ -1,3 +1,4 @@
+/*
 // var, let, const
 
 let score;
@@ -106,4 +107,101 @@ while(1 < 10) {
     console.log(`While Loop Number: ${i}`);
     i++;
 }
+
+
+// Loop through arrays
+for(let todo of todos) {
+    console.log(todo.id);
+}
+
+// High Order Array Methods
+// forEach, map, filter
+todos.forEach(function(todo) {
+    console.log(todo.text);
+});
+
+const todoText = todos.map(function(todo) {
+    return todo.text;
+});
+
+console.log(todoText);
+
+
+const todoCompleted = todos.filter(function(todo) {
+    return todo.isCompleted === true;
+}).map(function(todo) {
+    return todo.text;
+}
+
+
+
+// Conditionals
+const x = 6;
+const y = 11;
+
+if(x > 5 && y > 10) {
+    console.log('x is more than 5 or y is more than 10');
+}
+
+
+
+if (x > 5 || y > 10) {
+    console.log('x is more than 5 or y is more than 10');
+} 
 */
+
+/*
+else if(x > 10) {
+    console.log('x is greater than 10');
+} 
+else {
+    console.log('x is less than 10');
+}
+
+
+// Ternary Operator
+const x = 10;
+
+const color = x > 10 ? 'red' : 'blue';
+
+console.log(color);
+
+
+
+// Switches
+const x = 11;
+
+const color = x > 10 ? 'red' : 'blue';
+
+switch(color) {
+    case 'red':
+        console.log('Color is red');
+        break;
+    case 'blue':
+        console.log('Color is blue');
+        break;
+    default:
+        console.log('Color is NOT red or blue');
+        break;
+}
+
+
+
+// Functions
+function addNums(num1 = 1, num2 = 2) {
+    return num1 + num2;
+}
+
+console.log(addNums(5, 5));
+
+*/
+// Constructor function
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = dob;
+}
+// Instantiate object
+const person1 = new Person('John', 'Doe', '4-3-1980');
+
+console.log(person1);
